@@ -1,0 +1,32 @@
+# Agent Deck configuration — copied to ~/.config/agent-deck/config.toml by install.sh
+# All options: https://github.com/asheshgoplani/agent-deck/blob/main/skills/agent-deck/references/config-reference.md
+
+# Where new sessions start. Change to the repo you work in most.
+default_path = "~/projects"
+
+[hotkeys]
+  # Detach from an attached session back to the deck (default is ctrl+q).
+  detach = "ctrl+a"
+
+[claude]
+  # Runs Claude with --dangerously-skip-permissions. Remove if you want prompts.
+  dangerous_mode = true
+
+[worktree]
+  default_enabled = true
+  default_location = "sibling"
+  branch_prefix = "$USER/"
+
+[updates]
+  auto_install = false
+  auto_restart = false
+  check_enabled = false
+  notify_in_cli = false
+
+[tmux]
+  # Agent sessions live on their own tmux server, separate from your normal one:
+  #   tmux -L agent-deck ls
+  socket_name = "agent-deck"
+
+[ui]
+  preview_pct = 55
